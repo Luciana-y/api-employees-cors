@@ -15,7 +15,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-host_name = "18.205.231.187" # IPv4 privada de "MV Bases de Datos"
+host_name = "172.31.21.223" # IPv4 privada de "MV Bases de Datos"
 port_number = "8005"
 user_name = "root"
 password_db = "utec"
@@ -87,4 +87,5 @@ def delete_employee(id: int):
     mydb.commit()
     cursor.close()
     mydb.close()
+
     return {"message": "Employee deleted successfully"}
